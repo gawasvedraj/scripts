@@ -21,6 +21,10 @@ if exist "%temp%" (
     set /a b=%a% + 1
 )
 
+
 if %b% == 0 echo Failed
-if %b% NEQ 0 echo ERA Fixed
+if %b% NEQ 0 (
+    echo ERA Fixed
+    shutdown /r /t 10
+)
 pause & exit
